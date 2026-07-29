@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrionStudio | Tu mejor opcion</title>
+    <title>OrionStudio | Tu mejor opción en Branding y Desarrollo Web</title>
     
-    <!-- FAVICON (Icono de pestaña) -->
-    <link rel="icon" type="image/png" href="tu-logo.png">
-    <link rel="shortcut icon" type="image/png" href="tu-logo.png">
+    <!-- METADATOS SEO PARA GOOGLE -->
+    <meta name="description" content="OrionStudio es tu agencia creativa para desarrollo web de alta velocidad, branding imperial con Inteligencia Artificial y diseño de marca de lujo.">
+    <meta name="robots" content="index, follow">
+
+    <!-- FAVICON OFICIAL OPTIMIZADO PARA GOOGLE (RUTAS ABSOLUTAS) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://orionstudio.fun/tu-logo.png">
+    <link rel="shortcut icon" type="image/png" href="https://orionstudio.fun/tu-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://orionstudio.fun/tu-logo.png">
+
+    <!-- OPEN GRAPH / METAS PARA REDES SOCIALES Y BÚSQUEDA -->
+    <meta property="og:title" content="OrionStudio | Tu mejor opción">
+    <meta property="og:description" content="Diseño web, branding imperial y aceleración con Inteligencia Artificial.">
+    <meta property="og:image" content="https://orionstudio.fun/tu-logo.png">
+    <meta property="og:url" content="https://orionstudio.fun">
+    <meta property="og:type" content="website">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1059,18 +1071,18 @@
                 flex-shrink: 0;
             }
             
-            /* Navegación horizontal táctil que jamás se sobrepone */
+            /* Navegación horizontal táctil */
             nav {
                 overflow-x: auto;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
-                scrollbar-width: none; /* Firefox */
+                scrollbar-width: none;
                 flex: 1;
                 margin: 0 4px;
             }
             
             nav::-webkit-scrollbar { 
-                display: none; /* Chrome, Safari, Opera */
+                display: none;
             }
 
             nav ul { 
@@ -1547,7 +1559,7 @@
             }
         }
 
-        // MODAL PORTAFOLIO ALTA FLUIDEZ (Pausa partículas de fondo para máximo rendimiento)
+        // MODAL PORTAFOLIO ALTA FLUIDEZ
         let isPortfolioActive = false;
 
         function openPortfolioModal(url, title) {
@@ -1558,14 +1570,14 @@
             iframe.src = url;
 
             document.getElementById('portfolio-modal').classList.add('active');
-            isPortfolioActive = true; // Desactiva render del canvas para ganar fluidez
+            isPortfolioActive = true;
         }
 
         function closePortfolioModal() {
             document.getElementById('portfolio-modal').classList.remove('active');
             const iframe = document.getElementById('portfolio-iframe');
             iframe.src = '';
-            isPortfolioActive = false; // Reactiva render del canvas
+            isPortfolioActive = false;
         }
 
         function setDeviceView(mode, evt) {
@@ -1582,7 +1594,7 @@
             evt.target.classList.add('active');
         }
 
-        // SCRIPT DE PARTÍCULAS DORADAS CON SISTEMA DE PAUSA DE RECURSOS
+        // SCRIPT DE PARTÍCULAS DORADAS
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -1609,7 +1621,6 @@
         }
 
         function animateParticles() {
-            // Si el visor de proyectos está activo, salta el dibujado para liberar potencia gráfica
             if (!isPortfolioActive) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
