@@ -8,8 +8,9 @@
     <title>OrionStudio | Diseño Web & Identidad Visual</title>
     <meta name="description" content="OrionStudio - Creamos páginas web modernas, landing pages de alta conversión y diseño de marca profesional para impulsar tu negocio.">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.orionstudio.fun/">
     
-    <!-- FAVICON Y CONFIGURACIÓN DE BUSCADOR (Solución Google Search) -->
+    <!-- FAVICON Y CONFIGURACIÓN DE BUSCADOR (Apuntando a tu-logo.png) -->
     <link rel="icon" type="image/png" sizes="32x32" href="tu-logo.png">
     <link rel="icon" type="image/png" sizes="192x192" href="tu-logo.png">
     <link rel="apple-touch-icon" sizes="180x180" href="tu-logo.png">
@@ -17,10 +18,10 @@
 
     <!-- METADATOS DE REDES SOCIALES -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://orionstudio.fun/">
+    <meta property="og:url" content="https://www.orionstudio.fun/">
     <meta property="og:title" content="OrionStudio | Soluciones Digitales">
     <meta property="og:description" content="Diseño web profesional, landing pages e identidad de marca para emprendedores y empresas.">
-    <meta property="og:image" content="https://orionstudio.fun/tu-logo.png">
+    <meta property="og:image" content="https://www.orionstudio.fun/tu-logo.png">
 
     <!-- SCHEMA JSON-LD (Indica a Google tu logo oficial) -->
     <script type="application/ld+json">
@@ -28,8 +29,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "OrionStudio",
-      "url": "https://orionstudio.fun",
-      "logo": "https://orionstudio.fun/tu-logo.png",
+      "url": "https://www.orionstudio.fun",
+      "logo": "https://www.orionstudio.fun/tu-logo.png",
       "sameAs": [
         "https://wa.me/573236665429"
       ]
@@ -411,7 +412,7 @@
             font-weight: 300;
         }
 
-        /* PLANES DE PRECIOS (SIN CAJAS INTERNAS) */
+        /* PLANES DE PRECIOS */
         .pricing-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -458,7 +459,6 @@
             margin-bottom: 6px;
         }
 
-        /* PRECIO TAMAÑO MODERADO Y LIMPIO */
         .plan-cost {
             font-family: var(--font-title);
             font-size: 2.1rem;
@@ -477,7 +477,6 @@
             font-weight: 400;
         }
 
-        /* DOMINIO LIMPIO SIN RECUADROS REPETIDOS */
         .domain-text {
             font-size: 0.82rem;
             color: var(--gold-main);
@@ -512,7 +511,6 @@
             flex-shrink: 0;
         }
 
-        /* BOTÓN DE INFO SUTIL (SIN CAJA PESADA) */
         .info-icon {
             color: var(--text-secondary);
             font-size: 0.85rem;
@@ -525,7 +523,7 @@
             color: var(--gold-main);
         }
 
-        /* SERVICIOS INDIVIDUALES REESTRUCTURADOS */
+        /* SERVICIOS INDIVIDUALES */
         .individual-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -560,7 +558,6 @@
             margin-bottom: 4px;
         }
 
-        /* PRECIO INDIVIDUAL PROPORCIONADO */
         .individual-price {
             font-size: 1.15rem;
             font-weight: 700;
@@ -1369,9 +1366,7 @@
 
         function setDeviceView(mode, evt) {
             const iframe = document.getElementById('portfolio-iframe');
-            const btns = document.querySelectorAll('.device-btn');
-            
-            btns.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
 
             if (mode === 'mobile') {
                 iframe.classList.add('mobile-view');
