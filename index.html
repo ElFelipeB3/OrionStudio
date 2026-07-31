@@ -1,53 +1,70 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrionStudio | Tu mejor opción en Branding y Desarrollo Web</title>
     
-    <!-- METADATOS SEO PARA GOOGLE -->
-    <meta name="description" content="OrionStudio es tu agencia creativa para desarrollo web de alta velocidad, branding imperial con Inteligencia Artificial y diseño de marca de lujo.">
+    <!-- SEO & METADATOS PARA GOOGLE -->
+    <title>OrionStudio | Diseño Web & Identidad Visual</title>
+    <meta name="description" content="OrionStudio - Creamos páginas web modernas, landing pages de alta conversión y diseño de marca profesional para impulsar tu negocio.">
     <meta name="robots" content="index, follow">
-
-    <!-- FAVICON OFICIAL OPTIMIZADO PARA GOOGLE (RUTAS ABSOLUTAS) -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://orionstudio.fun/tu-logo.png">
-    <link rel="shortcut icon" type="image/png" href="https://orionstudio.fun/tu-logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://orionstudio.fun/tu-logo.png">
-
-    <!-- OPEN GRAPH / METAS PARA REDES SOCIALES Y BÚSQUEDA -->
-    <meta property="og:title" content="OrionStudio | Tu mejor opción">
-    <meta property="og:description" content="Diseño web, branding imperial y aceleración con Inteligencia Artificial.">
-    <meta property="og:image" content="https://orionstudio.fun/tu-logo.png">
-    <meta property="og:url" content="https://orionstudio.fun">
-    <meta property="og:type" content="website">
     
-    <!-- Google Fonts -->
+    <!-- FAVICON Y CONFIGURACIÓN DE BUSCADOR (Solución Google Search) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="tu-logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="tu-logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="tu-logo.png">
+    <link rel="shortcut icon" href="tu-logo.png" type="image/x-icon">
+
+    <!-- METADATOS DE REDES SOCIALES -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orionstudio.fun/">
+    <meta property="og:title" content="OrionStudio | Soluciones Digitales">
+    <meta property="og:description" content="Diseño web profesional, landing pages e identidad de marca para emprendedores y empresas.">
+    <meta property="og:image" content="https://orionstudio.fun/tu-logo.png">
+
+    <!-- SCHEMA JSON-LD (Indica a Google tu logo oficial) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OrionStudio",
+      "url": "https://orionstudio.fun",
+      "logo": "https://orionstudio.fun/tu-logo.png",
+      "sameAs": [
+        "https://wa.me/573236665429"
+      ]
+    }
+    </script>
+
+    <!-- TIPOGRAFÍAS LIMPIAS Y PROFESIONALES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
-    <!-- Iconos FontAwesome -->
+    <!-- FontAwesome Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --gold-light: #fff0a8;
+            --gold-light: #ffeb99;
             --gold-main: #f5c542;
-            --gold-dark: #9e7511;
-            --gold-gradient: linear-gradient(135deg, #fff3b3 0%, #f5c542 45%, #a87913 100%);
-            --glow-gold: rgba(245, 197, 66, 0.45);
-            --bg-void: #030204;
-            --glass-bg: rgba(12, 10, 16, 0.65);
-            --glass-border: rgba(245, 197, 66, 0.25);
+            --gold-dark: #b8860b;
+            --gold-gradient: linear-gradient(135deg, #fff2b2 0%, #f5c542 60%, #a87913 100%);
+            --glow-gold: rgba(245, 197, 66, 0.25);
+            --bg-void: #030205;
+            --glass-bg: rgba(14, 11, 20, 0.65);
+            --glass-border: rgba(245, 197, 66, 0.18);
             --text-primary: #ffffff;
-            --text-secondary: #c0b8aa;
+            --text-secondary: #a8a2b5;
+            --font-title: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: var(--font-body);
             scroll-behavior: smooth;
         }
 
@@ -55,10 +72,10 @@
             background-color: var(--bg-void);
             color: var(--text-primary);
             overflow-x: hidden;
-            line-height: 1.55;
+            line-height: 1.6;
         }
 
-        /* FONDO ANIMADO */
+        /* FONDO ANIMADO SUTIL */
         .viewport-background {
             position: fixed;
             top: 0;
@@ -73,34 +90,27 @@
             width: 100%;
             height: 100%;
             background: url('fondo-pagina.png') center/cover no-repeat;
-            animation: kenBurnsMotion 28s ease-in-out infinite alternate;
-            transform-origin: center center;
-            filter: brightness(0.9) contrast(1.15);
+            animation: kenBurnsMotion 30s ease-in-out infinite alternate;
+            filter: brightness(0.65) contrast(1.1);
             will-change: transform;
         }
 
         @keyframes kenBurnsMotion {
-            0% { transform: scale(1) translate(0px, 0px); }
-            50% { transform: scale(1.12) translate(-20px, -10px); }
-            100% { transform: scale(1.05) translate(15px, 10px); }
+            0% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.08) translate(-10px, -8px); }
+            100% { transform: scale(1.03) translate(8px, 8px); }
         }
 
         .portal-light-pulse {
             position: fixed;
-            top: 35%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(245, 197, 66, 0.25) 0%, rgba(245, 197, 66, 0.05) 50%, transparent 75%);
+            background: radial-gradient(circle, rgba(245, 197, 66, 0.15) 0%, transparent 70%);
             z-index: -2;
             pointer-events: none;
-            animation: lightPulse 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes lightPulse {
-            0% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.8); }
-            100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.2); }
         }
 
         .art-overlay {
@@ -110,8 +120,7 @@
             width: 100%;
             height: 100vh;
             z-index: -2;
-            background: radial-gradient(circle at center, transparent 20%, rgba(3, 2, 4, 0.82) 85%, var(--bg-void) 100%),
-                        linear-gradient(to bottom, transparent 50%, var(--bg-void) 100%);
+            background: radial-gradient(circle at center, transparent 20%, var(--bg-void) 90%);
             pointer-events: none;
         }
 
@@ -125,10 +134,10 @@
             pointer-events: none;
         }
 
-        /* HEADER FLOTANTE DELGADO */
+        /* HEADER FLOTANTE ORGANIZADO */
         .header-wrapper {
             position: fixed;
-            top: 15px;
+            top: 16px;
             left: 0;
             width: 100%;
             display: flex;
@@ -139,38 +148,26 @@
 
         header {
             width: 100%;
-            max-width: 1100px;
-            height: 52px;
-            background: rgba(8, 6, 10, 0.65);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
+            max-width: 1050px;
+            height: 54px;
+            background: rgba(10, 8, 16, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 50px;
+            border-radius: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 22px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            transition: all 0.3s ease;
-        }
-
-        header:hover {
-            border-color: rgba(245, 197, 66, 0.5);
-            box-shadow: 0 10px 35px rgba(245, 197, 66, 0.2);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
         }
 
         .nav-logo-custom {
-            height: 32px;
+            height: 30px;
             width: auto;
-            max-width: 120px;
+            max-width: 110px;
             object-fit: contain;
-            filter: drop-shadow(0 0 6px var(--glow-gold));
             flex-shrink: 0;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
         }
 
         nav ul {
@@ -182,150 +179,131 @@
         nav a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
+            letter-spacing: 1.2px;
+            font-weight: 600;
             transition: 0.3s;
-            white-space: nowrap;
         }
 
         nav a:hover {
             color: var(--gold-main);
-            text-shadow: 0 0 12px var(--glow-gold);
         }
 
         .header-actions {
             display: flex;
             align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
+            gap: 10px;
         }
 
         .currency-switch {
-            background: rgba(245, 197, 66, 0.1);
-            border: 1px solid var(--gold-main);
+            background: transparent;
+            border: 1px solid var(--glass-border);
             color: var(--gold-main);
             padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.72rem;
-            font-weight: 800;
+            font-size: 0.75rem;
+            font-weight: 700;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
             align-items: center;
             gap: 5px;
-            flex-shrink: 0;
         }
 
         .currency-switch:hover {
-            background: var(--gold-main);
-            color: #000;
-            box-shadow: 0 0 12px var(--glow-gold);
+            background: rgba(245, 197, 66, 0.15);
+            border-color: var(--gold-main);
         }
 
         .btn-header-mini {
             background: var(--gold-gradient);
-            color: #050402;
+            color: #000;
             padding: 7px 18px;
-            border-radius: 30px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: 800;
+            font-weight: 700;
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 15px var(--glow-gold);
+            letter-spacing: 0.5px;
             transition: 0.3s;
-            white-space: nowrap;
-            flex-shrink: 0;
         }
 
         .btn-header-mini:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(245, 197, 66, 0.7);
+            transform: scale(1.04);
+            box-shadow: 0 0 15px var(--glow-gold);
         }
 
         /* HERO SECTION */
         .hero {
-            min-height: 45vh;
+            min-height: 46vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 95px 20px 10px;
-            position: relative;
+            padding: 110px 20px 20px;
         }
 
         .hero-logo-giant {
             width: 100%;
-            max-width: 680px;
+            max-width: 580px;
             height: auto;
-            margin-bottom: 0px;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.95)) drop-shadow(0 0 35px rgba(245, 197, 66, 0.35));
-            animation: floatLogo 6s ease-in-out infinite;
-        }
-
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-8px) scale(1.01); }
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.8));
         }
 
         .hero-cta-group {
             display: flex;
-            gap: 15px;
+            gap: 14px;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: -30px;
+            margin-top: -10px;
             z-index: 10;
         }
 
         .btn-cyber-gold {
             background: var(--gold-gradient);
-            color: #080603;
-            padding: 13px 32px;
-            border-radius: 40px;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 800;
-            font-size: 0.82rem;
+            font-weight: 700;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0 8px 25px rgba(245, 197, 66, 0.35);
+            letter-spacing: 1px;
             transition: all 0.3s ease;
         }
 
         .btn-cyber-gold:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(245, 197, 66, 0.55);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 197, 66, 0.4);
         }
 
         .btn-cyber-glass {
-            background: var(--glass-bg);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--glass-border);
             color: #fff;
-            padding: 13px 32px;
-            border-radius: 40px;
+            padding: 12px 30px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.82rem;
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            backdrop-filter: blur(15px);
+            letter-spacing: 1px;
             transition: 0.3s;
         }
 
         .btn-cyber-glass:hover {
             border-color: var(--gold-main);
-            background: rgba(245, 197, 66, 0.15);
-            transform: translateY(-3px);
-            box-shadow: 0 0 20px var(--glow-gold);
+            background: rgba(245, 197, 66, 0.1);
+            transform: translateY(-2px);
         }
 
-        /* SECCIONES DESPEGADAS */
+        /* SECCIONES Y TÍTULOS */
         section {
-            padding: 68px 8%;
-            max-width: 1300px;
+            padding: 60px 8%;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -335,199 +313,177 @@
         }
 
         .section-title h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.4rem;
+            font-family: var(--font-title);
+            font-size: 2.2rem;
             color: #fff;
-            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         .gold-glow-text {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--gold-main);
         }
 
-        /* SECCIÓN "CONÓCENOS" */
+        /* CONÓCENOS */
         .knowus-manifesto {
             text-align: center;
-            max-width: 850px;
+            max-width: 780px;
             margin: 0 auto 40px;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
-            font-weight: 300;
-            line-height: 1.75;
+            font-weight: 400;
+            line-height: 1.7;
         }
 
         .pillars-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
         }
 
         .pillar-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(25px);
             border: 1px solid var(--glass-border);
-            border-radius: 22px;
-            padding: 38px 30px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
+            border-radius: 16px;
+            padding: 30px 24px;
+            transition: all 0.3s ease;
         }
 
         .pillar-card:hover {
-            transform: translateY(-6px);
             border-color: var(--gold-main);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.9), 0 0 25px var(--glow-gold);
-        }
-
-        .pillar-number {
-            font-family: 'Cinzel', serif;
-            font-size: 4rem;
-            font-weight: 900;
-            position: absolute;
-            top: 5px;
-            right: 15px;
-            background: linear-gradient(180deg, rgba(245, 197, 66, 0.2) 0%, transparent 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            pointer-events: none;
+            transform: translateY(-4px);
         }
 
         .pillar-icon {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--gold-main);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: inline-block;
-            filter: drop-shadow(0 0 8px var(--glow-gold));
         }
 
         .pillar-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.35rem;
+            font-family: var(--font-title);
+            font-size: 1.2rem;
             color: #fff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .pillar-card p {
             color: var(--text-secondary);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 300;
         }
 
         /* SERVICIOS PRINCIPALES */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
         }
 
         .service-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 22px;
-            padding: 35px 28px;
-            transition: all 0.4s ease;
+            border-radius: 16px;
+            padding: 28px 22px;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-6px);
             border-color: var(--gold-main);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.8), 0 0 20px rgba(245, 197, 66, 0.2);
+            transform: translateY(-4px);
         }
 
         .service-card-icon {
-            font-size: 2.3rem;
+            font-size: 2rem;
             color: var(--gold-main);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .service-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-family: var(--font-title);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
         }
 
         .service-card p {
             color: var(--text-secondary);
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             font-weight: 300;
         }
 
-        /* PLANES DE PRECIOS */
+        /* PLANES DE PRECIOS (SIN CAJAS INTERNAS) */
         .pricing-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            max-width: 1000px;
+            gap: 30px;
+            max-width: 950px;
             margin: 0 auto;
         }
 
         .price-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(25px);
             border: 1px solid var(--glass-border);
-            border-radius: 26px;
-            padding: 42px 32px;
+            border-radius: 20px;
+            padding: 35px 28px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: 0.4s;
+            transition: 0.3s;
             position: relative;
         }
 
         .price-card.master {
-            border: 2px solid var(--gold-main);
-            background: rgba(16, 12, 20, 0.85);
-            box-shadow: 0 0 40px rgba(245, 197, 66, 0.25);
+            border: 1.5px solid var(--gold-main);
+            background: rgba(18, 14, 24, 0.85);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .popular-tag {
             position: absolute;
-            top: -14px;
-            right: 25px;
+            top: -12px;
+            right: 20px;
             background: var(--gold-gradient);
             color: #000;
             font-weight: 800;
-            font-size: 0.7rem;
-            padding: 5px 15px;
-            border-radius: 20px;
+            font-size: 0.68rem;
+            padding: 4px 12px;
+            border-radius: 15px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .plan-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.65rem;
-            margin-bottom: 8px;
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            margin-bottom: 6px;
         }
 
+        /* PRECIO TAMAÑO MODERADO Y LIMPIO */
         .plan-cost {
-            font-family: 'Cinzel', serif;
-            font-size: 2.9rem;
+            font-family: var(--font-title);
+            font-size: 2.1rem;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 12px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
         }
 
-        .plan-cost span {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .domain-box {
-            background: rgba(245, 197, 66, 0.08);
-            border: 1px dashed var(--gold-main);
-            padding: 8px 12px;
-            border-radius: 10px;
-            font-family: monospace;
+        .plan-cost span.pay-period {
             font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            font-weight: 400;
+        }
+
+        /* DOMINIO LIMPIO SIN RECUADROS REPETIDOS */
+        .domain-text {
+            font-size: 0.82rem;
             color: var(--gold-main);
-            margin-bottom: 25px;
-            display: inline-block;
-            word-break: break-all;
+            margin-bottom: 22px;
+            display: block;
+            font-weight: 600;
         }
 
         .plan-list {
@@ -536,13 +492,12 @@
         }
 
         .plan-list li {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             color: var(--text-primary);
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 10px;
         }
 
         .plan-list-content {
@@ -551,52 +506,39 @@
             gap: 10px;
         }
 
-        .plan-list li i.fa-check,
-        .plan-list li i.fa-star {
+        .plan-list li i {
             color: var(--gold-main);
+            font-size: 0.85rem;
             flex-shrink: 0;
         }
 
-        .info-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            border-radius: 6px;
-            background: rgba(245, 197, 66, 0.12);
-            border: 1px solid var(--gold-main);
-            color: var(--gold-main);
-            font-size: 0.72rem;
-            font-weight: 800;
+        /* BOTÓN DE INFO SUTIL (SIN CAJA PESADA) */
+        .info-icon {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
             cursor: pointer;
-            transition: all 0.25s ease;
-            flex-shrink: 0;
+            transition: 0.2s;
             margin-left: 6px;
         }
 
-        .info-btn:hover, .info-btn:active {
-            background: var(--gold-gradient);
-            color: #000;
-            box-shadow: 0 0 12px var(--glow-gold);
-            transform: scale(1.15);
+        .info-icon:hover {
+            color: var(--gold-main);
         }
 
-        /* SECCIÓN SERVICIOS INDIVIDUALES */
+        /* SERVICIOS INDIVIDUALES REESTRUCTURADOS */
         .individual-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin-top: 15px;
         }
 
         .individual-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 28px 22px;
-            backdrop-filter: blur(20px);
-            transition: all 0.35s ease;
+            border-radius: 16px;
+            padding: 24px 20px;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -604,100 +546,85 @@
 
         .individual-card:hover {
             border-color: var(--gold-main);
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.8), 0 0 20px rgba(245, 197, 66, 0.25);
+            transform: translateY(-4px);
         }
 
         .individual-card-top {
-            margin-bottom: 20px;
-        }
-
-        .individual-icon {
-            font-size: 2rem;
-            color: var(--gold-main);
-            margin-bottom: 12px;
-            display: inline-block;
+            margin-bottom: 16px;
         }
 
         .individual-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-family: var(--font-title);
+            font-size: 1.1rem;
             color: #fff;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
+        /* PRECIO INDIVIDUAL PROPORCIONADO */
         .individual-price {
-            font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--gold-light);
-            margin-bottom: 12px;
-            display: inline-block;
-            background: rgba(245, 197, 66, 0.1);
-            padding: 4px 14px;
-            border-radius: 30px;
-            border: 1px solid rgba(245, 197, 66, 0.3);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-main);
+            margin-bottom: 10px;
+            display: block;
         }
 
         .individual-card p {
             color: var(--text-secondary);
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 300;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .btn-individual-buy {
-            background: var(--gold-gradient);
-            color: #000;
+            background: transparent;
+            border: 1px solid var(--gold-main);
+            color: var(--gold-main);
             text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 0.8rem;
-            font-weight: 800;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 700;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(245, 197, 66, 0.2);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .btn-individual-buy:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(245, 197, 66, 0.5);
+            background: var(--gold-gradient);
+            color: #000;
+            border-color: transparent;
         }
 
-        /* PORTAFOLIO INTERACTIVO */
+        /* PORTAFOLIO */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
         }
 
         .portfolio-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            backdrop-filter: blur(20px);
-            transition: 0.4s ease;
-            position: relative;
+            transition: 0.3s ease;
         }
 
         .portfolio-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             border-color: var(--gold-main);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.9), 0 0 25px var(--glow-gold);
         }
 
         .portfolio-img-box {
             width: 100%;
-            height: 200px;
+            height: 180px;
             overflow: hidden;
-            position: relative;
             background: #000;
         }
 
@@ -705,76 +632,74 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
             opacity: 0.85;
+            transition: 0.4s ease;
         }
 
         .portfolio-card:hover .portfolio-img-box img {
-            transform: scale(1.08);
+            transform: scale(1.05);
             opacity: 1;
         }
 
         .portfolio-content {
-            padding: 22px;
+            padding: 18px;
         }
 
         .portfolio-tag {
             font-size: 0.7rem;
             color: var(--gold-main);
-            font-weight: 800;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 6px;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
             display: block;
         }
 
         .portfolio-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.25rem;
+            font-family: var(--font-title);
+            font-size: 1.15rem;
             color: #fff;
             margin-bottom: 12px;
         }
 
         .btn-portfolio-view {
             width: 100%;
-            background: rgba(245, 197, 66, 0.12);
-            border: 1px solid var(--gold-main);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
             color: #fff;
-            padding: 10px;
-            border-radius: 12px;
+            padding: 8px;
+            border-radius: 10px;
             font-size: 0.8rem;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .btn-portfolio-view:hover {
             background: var(--gold-gradient);
             color: #000;
-            box-shadow: 0 0 15px var(--glow-gold);
+            border-color: transparent;
         }
 
-        /* MODAL DE NAVEGACIÓN EN VIVO HIGH-PERFORMANCE */
+        /* MODAL PORTAFOLIO INTERACTIVO */
         .portfolio-modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(3, 2, 5, 0.96);
+            background: rgba(3, 2, 5, 0.95);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             z-index: 3000;
             display: flex;
             flex-direction: column;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.25s ease-out;
-            transform: translateZ(0);
         }
 
         .portfolio-modal-overlay.active {
@@ -783,24 +708,19 @@
         }
 
         .portfolio-modal-bar {
-            height: 60px;
+            height: 55px;
             background: rgba(12, 9, 18, 0.98);
             border-bottom: 1px solid var(--glass-border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
-            gap: 10px;
+            padding: 0 18px;
         }
 
         .portfolio-modal-title {
-            font-family: 'Cinzel', serif;
+            font-family: var(--font-title);
             color: var(--gold-main);
-            font-size: 1.05rem;
-            font-weight: 700;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 1rem;
         }
 
         .device-controls {
@@ -813,39 +733,25 @@
             background: rgba(255,255,255,0.08);
             border: 1px solid var(--glass-border);
             color: #fff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.72rem;
             cursor: pointer;
-            transition: 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 4px;
         }
 
-        .device-btn.active, .device-btn:hover {
+        .device-btn.active {
             border-color: var(--gold-main);
             color: var(--gold-main);
-            background: rgba(245, 197, 66, 0.15);
         }
 
         .btn-external-link {
             background: var(--gold-gradient);
             color: #000;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.72rem;
+            font-weight: 700;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: 0.2s;
-        }
-
-        .btn-external-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px var(--glow-gold);
         }
 
         .portfolio-iframe-container {
@@ -853,8 +759,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px;
-            overflow: hidden;
+            padding: 10px;
             background: #030204;
         }
 
@@ -862,280 +767,147 @@
             width: 100%;
             height: 100%;
             border: 1px solid var(--glass-border);
-            border-radius: 12px;
+            border-radius: 10px;
             background: #fff;
-            transition: width 0.3s ease, height 0.3s ease;
-            will-change: transform;
-            -webkit-overflow-scrolling: touch;
+            transition: width 0.3s ease;
         }
 
         .portfolio-iframe.mobile-view {
-            width: 375px;
-            height: 667px;
-            max-height: 90vh;
-            border-radius: 28px;
-            border: 6px solid #222;
-            box-shadow: 0 0 35px rgba(0,0,0,0.9);
+            width: 360px;
+            height: 640px;
+            max-height: 88vh;
+            border-radius: 24px;
+            border: 4px solid #222;
         }
 
-        /* REDES SOCIALES CON BRILLO ESPECÍFICO DE MARCA */
+        /* REDES SOCIALES */
         .social-hub {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
         }
 
         .social-card {
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
-            padding: 22px;
-            border-radius: 20px;
+            padding: 20px;
+            border-radius: 16px;
             text-align: center;
             color: #fff;
             text-decoration: none;
-            backdrop-filter: blur(15px);
-            transition: all 0.35s ease;
-            cursor: pointer;
+            transition: 0.3s ease;
         }
 
         .social-card i {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
+            font-size: 2rem;
+            margin-bottom: 6px;
             display: block;
-            transition: transform 0.3s ease;
         }
 
         .social-card span {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .social-card.whatsapp:hover {
-            border-color: #25D366;
-            background: rgba(37, 211, 102, 0.12);
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
-            transform: translateY(-5px);
-        }
+        .social-card.whatsapp:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.1); }
         .social-card.whatsapp i { color: #25D366; }
 
-        .social-card.instagram:hover {
-            border-color: #E1306C;
-            background: rgba(225, 48, 108, 0.12);
-            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.35);
-            transform: translateY(-5px);
-        }
+        .social-card.instagram:hover { border-color: #E1306C; background: rgba(225, 48, 108, 0.1); }
         .social-card.instagram i { color: #E1306C; }
 
-        .social-card.facebook:hover {
-            border-color: #1877F2;
-            background: rgba(24, 119, 242, 0.12);
-            box-shadow: 0 10px 25px rgba(24, 119, 242, 0.35);
-            transform: translateY(-5px);
-        }
+        .social-card.facebook:hover { border-color: #1877F2; background: rgba(24, 119, 242, 0.1); }
         .social-card.facebook i { color: #1877F2; }
 
         /* VENTANA MODAL INFO */
         .modal-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(3, 2, 4, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
             z-index: 2000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: flex; justify-content: center; align-items: center;
             padding: 20px;
-            opacity: 0;
-            pointer-events: none;
+            opacity: 0; pointer-events: none;
             transition: opacity 0.3s ease;
         }
 
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
 
         .modal-card {
             background: rgba(18, 14, 24, 0.95);
-            border: 1.5px solid var(--gold-main);
-            border-radius: 24px;
-            padding: 30px 25px;
-            max-width: 480px;
-            width: 100%;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.9), 0 0 30px var(--glow-gold);
+            border: 1px solid var(--gold-main);
+            border-radius: 20px;
+            padding: 25px 20px;
+            max-width: 440px; width: 100%;
             position: relative;
-            transform: translateY(20px) scale(0.95);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .modal-overlay.active .modal-card {
-            transform: translateY(0) scale(1);
         }
 
         .modal-close {
             position: absolute;
-            top: 15px;
-            right: 18px;
-            background: rgba(245, 197, 66, 0.15);
-            border: 1px solid var(--gold-main);
+            top: 12px; right: 15px;
+            background: transparent;
+            border: none;
             color: var(--gold-main);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            font-size: 1rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.2s;
-        }
-
-        .modal-close:hover {
-            background: var(--gold-main);
-            color: #000;
         }
 
         .modal-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-family: var(--font-title);
+            font-size: 1.2rem;
             color: var(--gold-main);
-            margin-bottom: 12px;
-            padding-right: 30px;
+            margin-bottom: 10px;
+            padding-right: 20px;
         }
 
-        .modal-body {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            font-weight: 300;
-        }
+        .modal-body { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
 
-        /* FOOTER CENTRADO */
+        /* FOOTER */
         footer {
-            padding: 35px 8%;
+            padding: 30px 8%;
             background: rgba(3, 2, 4, 0.95);
             border-top: 1px solid var(--glass-border);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            gap: 6px;
         }
 
         .footer-text {
             color: var(--text-secondary);
-            font-size: 0.85rem;
-            letter-spacing: 1.2px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            font-weight: 600;
         }
 
         .footer-subtext {
             color: var(--gold-main);
-            font-size: 0.78rem;
-            letter-spacing: 1px;
+            font-size: 0.75rem;
+            margin-top: 4px;
         }
 
-        /* =================================================== */
-        /* OPTIMIZACIONES MÓVILES Y HEADER FLUIDO Y PERFECTO   */
-        /* =================================================== */
-        @media (max-width: 900px) {
-            section { padding: 45px 6%; }
-        }
-
+        /* RESPONSIVO MÓVIL */
         @media (max-width: 768px) {
-            .header-wrapper { 
-                top: 8px; 
-                padding: 0 8px; 
-            }
+            .header-wrapper { top: 8px; padding: 0 8px; }
+            header { padding: 0 10px; height: 48px; }
+            .nav-logo-custom { height: 22px; }
             
-            header { 
-                padding: 0 10px; 
-                height: 50px; 
-                gap: 6px;
-                justify-content: space-between;
-            }
-            
-            .nav-logo-custom { 
-                height: 24px; 
-                width: auto;
-                max-width: 70px; 
-                flex-shrink: 0;
-            }
-            
-            /* Navegación horizontal táctil */
             nav {
                 overflow-x: auto;
                 white-space: nowrap;
-                -webkit-overflow-scrolling: touch;
                 scrollbar-width: none;
                 flex: 1;
                 margin: 0 4px;
             }
-            
-            nav::-webkit-scrollbar { 
-                display: none;
-            }
+            nav::-webkit-scrollbar { display: none; }
+            nav ul { gap: 12px; }
+            nav a { font-size: 0.65rem; }
 
-            nav ul { 
-                gap: 12px; 
-                padding: 0 4px;
-            }
-
-            nav a { 
-                font-size: 0.65rem; 
-                letter-spacing: 0.8px; 
-            }
-
-            .header-actions {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                flex-shrink: 0;
-            }
-
-            .currency-switch { 
-                font-size: 0.62rem; 
-                padding: 4px 8px; 
-                border-radius: 15px;
-                flex-shrink: 0;
-            }
-
-            .btn-header-mini { 
-                padding: 6px 12px; 
-                font-size: 0.65rem; 
-                border-radius: 20px;
-                flex-shrink: 0;
-            }
-
-            .hero { min-height: 40vh; padding: 85px 15px 20px; }
-            .hero-logo-giant { max-width: 100%; }
-            .hero-cta-group { margin-top: 0px; gap: 10px; width: 100%; }
-            .btn-cyber-gold, .btn-cyber-glass { width: 100%; text-align: center; padding: 12px 20px; font-size: 0.8rem; }
-            .section-title h2 { font-size: 1.7rem; }
-            .pricing-container { gap: 25px; }
-            .price-card { padding: 32px 20px; }
-            .plan-cost { font-size: 2.3rem; }
-            .social-hub { grid-template-columns: 1fr; gap: 12px; }
-            .portfolio-modal-bar { padding: 0 10px; }
-            .btn-external-link { font-size: 0.65rem; padding: 5px 8px; }
-        }
-
-        /* Ajuste extremo para celulares muy pequeños (< 380px) */
-        @media (max-width: 380px) {
-            header { padding: 0 6px; }
-            .nav-logo-custom { max-width: 55px; }
-            .currency-switch { padding: 4px 6px; font-size: 0.58rem; }
-            .btn-header-mini { padding: 5px 9px; font-size: 0.6rem; }
-            nav ul { gap: 8px; }
+            .hero { min-height: 38vh; padding: 80px 15px 15px; }
+            .hero-cta-group { margin-top: 0px; gap: 8px; width: 100%; }
+            .btn-cyber-gold, .btn-cyber-glass { width: 100%; text-align: center; padding: 10px 16px; font-size: 0.78rem; }
+            .section-title h2 { font-size: 1.6rem; }
+            .price-card { padding: 28px 18px; }
+            .plan-cost { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -1176,10 +948,10 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <img src="logo-texto.png" alt="OrionStudio Portal" class="hero-logo-giant">
+        <img src="logo-texto.png" alt="OrionStudio" class="hero-logo-giant">
         
         <div class="hero-cta-group">
-            <a href="#planes" class="btn-cyber-gold">Explorar Paquetes</a>
+            <a href="#planes" class="btn-cyber-gold">Ver Paquetes</a>
             <a href="#conocenos" class="btn-cyber-glass">Conócenos</a>
         </div>
     </section>
@@ -1187,33 +959,30 @@
     <!-- SECCIÓN CONÓCENOS -->
     <section id="conocenos">
         <div class="section-title">
-            <h2>Conócenos: <span class="gold-glow-text">El ADN de OrionStudio</span></h2>
+            <h2>Diseño Web & <span class="gold-glow-text">Estrategia Digital</span></h2>
         </div>
 
         <p class="knowus-manifesto">
-            No somos una agencia convencional. Somos el puente donde el arte, la creatividad y <strong>la inteligencia artificial</strong> logran excelentes resultados.
+            Ayudamos a marcas y emprendedores a destacar en internet. Combinamos diseño web moderno, identidad visual profesional y optimización técnica para que consigas más clientes.
         </p>
 
         <div class="pillars-grid">
             <div class="pillar-card">
-                <span class="pillar-number">01</span>
-                <i class="fa-solid fa-mountain-sun pillar-icon"></i>
-                <h3>Inspiración Ancestral</h3>
-                <p>Nuestra estética nace de la majestuosidad de la Puerta de Orión. Diseñamos marcas con identidad imponente, fuerza visual y permanencia en el tiempo.</p>
+                <i class="fa-solid fa-compass-drafting pillar-icon"></i>
+                <h3>Diseño con Propósito</h3>
+                <p>Estructuras limpias y enfocadas en la conversión. Cada sitio que creamos está pensado para ser fácil de navegar y atractivo para tus visitantes.</p>
             </div>
 
             <div class="pillar-card">
-                <span class="pillar-number">02</span>
-                <i class="fa-solid fa-microchip pillar-icon"></i>
-                <h3>Aceleración con IA</h3>
-                <p>Usamos modelos de Inteligencia Artificial de vanguardia para generar logotipos vectoriales, animaciones hiperrealistas y código web ultrarrápido a una velocidad récord.</p>
+                <i class="fa-solid fa-bolt pillar-icon"></i>
+                <h3>Velocidad y Eficiencia</h3>
+                <p>Utilizamos tecnologías modernas para entregar tu proyecto en tiempo récord, con páginas que cargan al instante en celulares y computadores.</p>
             </div>
 
             <div class="pillar-card">
-                <span class="pillar-number">03</span>
-                <i class="fa-solid fa-gem pillar-icon"></i>
-                <h3>Estándar de Lujo</h3>
-                <p>Cada proyecto se entrega pulido bajo estándares estéticos internacionales. Hacemos que pequeños negocios y grandes marcas luzcan de clase mundial.</p>
+                <i class="fa-solid fa-shield-halved pillar-icon"></i>
+                <h3>Calidad Garantizada</h3>
+                <p>Nos enfocamos en los detalles técnicos y estéticos para que tu marca proyecte confianza y profesionalismo ante tus clientes desde el primer segundo.</p>
             </div>
         </div>
     </section>
@@ -1221,29 +990,29 @@
     <!-- SERVICIOS PRINCIPALES -->
     <section id="servicios">
         <div class="section-title">
-            <h2>Nuestra <span class="gold-glow-text">Tecnología</span></h2>
+            <h2>Nuestros <span class="gold-glow-text">Servicios</span></h2>
         </div>
 
         <div class="services-grid">
             <div class="service-card">
-                <i class="fa-solid fa-wand-magic-sparkles service-card-icon"></i>
-                <h3>Branding Imperial</h3>
-                <p>Creación de logos vectoriales, isotipos y sistemas de marca impulsados por algoritmos de generación gráfica de alta precisión.</p>
+                <i class="fa-solid fa-pen-nib service-card-icon"></i>
+                <h3>Diseño de Marca</h3>
+                <p>Logotipos profesionales, paletas de color y líneas gráficas pensadas para posicionar tu negocio de manera sólida.</p>
             </div>
             <div class="service-card">
-                <i class="fa-solid fa-globe service-card-icon"></i>
-                <h3>Arquitectura Web Pro</h3>
-                <p>Desarrollo de sitios web ultrarrápidos con estética de cristal, optimizados para celulares y preparados para convertir clientes.</p>
+                <i class="fa-solid fa-code service-card-icon"></i>
+                <h3>Desarrollo Web</h3>
+                <p>Landing pages y sitios web corporativos adaptados a dispositivos móviles, rápidos y preparados para recibir ventas.</p>
             </div>
             <div class="service-card">
-                <i class="fa-solid fa-film service-card-icon"></i>
-                <h3>Animación IA & Video</h3>
-                <p>Convertimos imágenes estáticas en videos promocionales en movimiento cinematográfico ideales para anuncios y TikTok.</p>
+                <i class="fa-solid fa-video service-card-icon"></i>
+                <h3>Animación de Logo</h3>
+                <p>Damos vida a tu marca con animaciones cinematográficas ideales para intros de video, redes sociales y publicidad.</p>
             </div>
             <div class="service-card">
-                <i class="fa-solid fa-chart-line service-card-icon"></i>
-                <h3>Anuncios de Alto Impacto</h3>
-                <p>Diseño publicitario masivo diseñado para captar la atención inmediatamente y detener el scroll en redes sociales.</p>
+                <i class="fa-solid fa-bullhorn service-card-icon"></i>
+                <h3>Piezas Publicitarias</h3>
+                <p>Diseño de imágenes e historias promocionales optimizadas para captar la atención en Instagram, Facebook y TikTok.</p>
             </div>
         </div>
     </section>
@@ -1251,7 +1020,7 @@
     <!-- PLANES DE PRECIOS -->
     <section id="planes">
         <div class="section-title">
-            <h2>Planes de <span class="gold-glow-text">Lanzamiento</span></h2>
+            <h2>Planes de <span class="gold-glow-text">Diseño Web</span></h2>
         </div>
 
         <div class="pricing-container">
@@ -1261,98 +1030,119 @@
                 <div>
                     <div class="plan-name">Plan Básico</div>
                     <div class="plan-cost">
-                        <span class="price-val" data-cop="$150.000" data-usd="47 USD">$150.000</span>
-                        <span>/ Único pago</span>
+                        <span class="price-val" data-cop="$150.000" data-usd="$38 USD">$150.000</span>
+                        <span class="pay-period">/ Único pago</span>
                     </div>
-                    <div class="domain-box">🌐 (tuempresa).orionstudio.fun</div>
+                    <span class="domain-text">🌐 (tuempresa).orionstudio.fun</span>
+                    
                     <ul class="plan-list">
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Subdominio en Servidor OrionStudio
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>Landing Page (1 sola página)</strong></span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Subdominio en Servidor OrionStudio', 'Tu sitio web estará alojado de forma segura en nuestros servidores de alta velocidad bajo una dirección como tuempresa.orionstudio.fun. Ideal para comenzar a vender inmediatamente sin pagar hosting externo.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Landing Page (1 sola página)', 'Página web One-Page donde toda la información de tu negocio (servicios, fotos y contacto) se organiza de forma fluida en una sola pantalla.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Diseñado y listo para vender
+                                <i class="fa-solid fa-check"></i>
+                                <span>Subdominio en servidor rápido</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Diseñado y listo para vender', 'Creamos una estructura enfocada en conversión de clientes, destacando tus productos o servicios con llamadas a la acción estratégicas.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Subdominio incluido', 'Tu página estará publicada bajo tuempresa.orionstudio.fun en nuestros servidores seguros sin costos adicionales de hosting.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Logo e Identidad Visual
+                                <i class="fa-solid fa-check"></i>
+                                <span>Diseño enfocado en ventas</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Logo e Identidad Visual', 'Diseñamos un logotipo profesional adaptado al nicho de tu negocio y la paleta de colores oficial para tu presencia web.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Enfocado en ventas', 'Estructura clara orientada a convertir visitantes en clientes de manera rápida.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Integración Directa a tu WhatsApp
+                                <i class="fa-solid fa-check"></i>
+                                <span>Diseño de Logo básico</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Integración a WhatsApp', 'Incluimos botones directos que abren un chat en tu WhatsApp personal o corporativo con mensajes predeterminados para recibir pedidos rápidamente.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Logo incluido', 'Creación de un logotipo sencillo y adaptado a los colores de tu nuevo sitio web.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Optimizado para Móviles
+                                <i class="fa-solid fa-check"></i>
+                                <span>Botón directo a WhatsApp</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Optimizado para Móviles', 'Garantizamos que tu sitio cargue velozmente y se vea perfecto en cualquier smartphone, tablet o computadora.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Botón de WhatsApp', 'Tus clientes podrán contactarte directamente a tu teléfono con un solo clic.')"></i>
+                        </li>
+                        <li>
+                            <div class="plan-list-content">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Adaptado a celulares y PC</span>
+                            </div>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Adaptado a móviles', 'Navegación perfecta y optimizada en smartphones y computadores.')"></i>
                         </li>
                     </ul>
                 </div>
-                <a href="https://wa.me/573236665429?text=Hola,%20quiero%20el%20Plan%20Basico%20(Subdominio)" class="btn-cyber-glass" style="text-align: center;">Elegir Plan Básico</a>
+                <a href="https://wa.me/573236665429?text=Hola,%20quiero%20el%20Plan%20Basico%20(Landing%20Page)" class="btn-cyber-glass" style="text-align: center;">Elegir Plan Básico</a>
             </div>
 
             <!-- PLAN ORIÓN -->
             <div class="price-card master">
-                <div class="popular-tag">Sugerido 👑</div>
+                <div class="popular-tag">Recomendado 👑</div>
                 <div>
                     <div class="plan-name gold-glow-text">Plan Orión</div>
                     <div class="plan-cost">
-                        <span class="price-val" data-cop="$380.000" data-usd="119 USD">$380.000</span>
-                        <span>/ Único pago</span>
+                        <span class="price-val" data-cop="$380.000" data-usd="$95 USD">$380.000</span>
+                        <span class="pay-period">/ Único pago</span>
                     </div>
-                    <div class="domain-box" style="background: rgba(245, 197, 66, 0.2); font-weight: bold;">⭐ www.tuempresa.com</div>
+                    <span class="domain-text">⭐ www.tuempresa.com</span>
+                    
                     <ul class="plan-list">
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-star"></i> <strong>Dominio personalizado (asesoramos)</strong>
+                                <i class="fa-solid fa-star"></i>
+                                <span><strong>Dominio propio (Te asesoramos)</strong></span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Dominio Personalizado', 'Te asesoramos paso a paso para que compres y registres tu propio dominio (ejemplo: www.tuempresa.com) a tu nombre. Nosotros no cobramos el valor del dominio pero nos encargamos de configurarlo e integrarlo con la web gratis.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Dominio Propio', 'Te asesoramos paso a paso para que compres tu propio dominio (ej: tuempresa.com). La configuración e integración técnica la realizamos totalmente gratis.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-star"></i> Propiedad 100% independiente
+                                <i class="fa-solid fa-check"></i>
+                                <span>Sitio Web Multipágina Completo</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Propiedad 100% Independiente', 'Tu marca y tu página web son 100% tuyas. No dependes de plataformas de terceros ni de pagos mensuales ocultos.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Sitio Multipágina', 'Página web completa con varias secciones independientes: Inicio, Nosotros, Servicios, Catálogo y Contacto.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Sitio Web Multipágina Completo
+                                <i class="fa-solid fa-check"></i>
+                                <span>Logo Pro + Archivos Editables</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Sitio Web Multipágina Completo', 'Estructura avanzada con varias secciones (Inicio, Servicios, Nosotros, Catálogo y Contacto) para transmitir la máxima confianza a tus clientes.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Logo Pro', 'Entregamos tu logotipo en máxima calidad (PNG transparente y formatos vectoriales SVG para estampados o imprenta).')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Logo + Manual de Marca Pro
+                                <i class="fa-solid fa-check"></i>
+                                <span>Video Animado de tu Logo</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Logo + Manual de Marca Pro', 'Entregamos tu logotipo en todos los formatos de alta resolución (PNG transparente, SVG vectorial) junto a la guía de tipografías y código de colores.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Animación de Logo', 'Animación profesional en video de tu logotipo para historias de Instagram, Facebook o TikTok.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Animación de logo
+                                <i class="fa-solid fa-check"></i>
+                                <span><strong>5 actualizaciones gratis al año</strong></span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Animación de Logo', 'Damos vida a tu logotipo con un video animado en movimiento fluido, ideal para intros de videos, historias de Instagram o Reels.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('5 Actualizaciones Gratis', 'Puedes solicitar hasta 5 cambios de precios, imágenes o textos durante el año sin ningún costo adicional.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> 10 actualizaciones gratis
+                                <i class="fa-solid fa-check"></i>
+                                <span>Totalmente optimizado para Móviles</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('10 Actualizaciones Gratis', 'Tienes hasta 10 solicitudes gratuitas durante el año para actualizar textos, cambiar precios o subir imágenes nuevas a tu página web sin costo extra.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Optimización Móvil', 'Ajuste perfecto del sitio web para ofrecer máxima velocidad y comodidad de lectura en celulares.')"></i>
                         </li>
                         <li>
                             <div class="plan-list-content">
-                                <i class="fa-solid fa-check"></i> Soporte VIP y asesoría permanente
+                                <i class="fa-solid fa-check"></i>
+                                <span>Soporte técnico preferencial</span>
                             </div>
-                            <button class="info-btn" onclick="openModal('Soporte VIP y Asesoría', 'Atención directa y prioritaria por WhatsApp para resolver dudas técnicas, acompañarte en tu crecimiento y aconsejarte sobre tu estrategia digital.')">?</button>
+                            <i class="fa-regular fa-circle-question info-icon" onclick="openModal('Soporte Preferencial', 'Atención directa por WhatsApp para resolver cualquier duda o necesidad técnica de tu página.')"></i>
                         </li>
                     </ul>
                 </div>
@@ -1363,10 +1153,10 @@
     </section>
 
     <!-- SERVICIOS INDIVIDUALES A LA CARTA -->
-    <section id="individuales" style="padding-top: 20px;">
+    <section id="individuales">
         <div class="section-title">
             <h2>Servicios <span class="gold-glow-text">Individuales</span></h2>
-            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 8px;">¿Solo necesitas un servicio específico? Elige exactamente lo que tu marca necesita hoy.</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 6px;">¿Solo necesitas un trabajo específico? Elige lo que tu marca requiere hoy.</p>
         </div>
 
         <div class="individual-grid">
@@ -1374,23 +1164,23 @@
                 <div class="individual-card-top">
                     <i class="fa-solid fa-pen-nib individual-icon"></i>
                     <h3>Creación de Logo Pro</h3>
-                    <div class="individual-price micro-price" data-cop="$70.000 COP" data-usd="22 USD">$70.000 COP</div>
-                    <p>Diseñamos un logotipo único e imponente desde cero. Te entregamos la identidad visual completa con archivos vectoriales listos para estampados, redes y web.</p>
+                    <span class="individual-price micro-price" data-cop="$50.000 COP" data-usd="$13 USD">$50.000 COP</span>
+                    <p>Diseñamos un logotipo original y profesional desde cero. Te entregamos archivos en alta definición y fondo transparente listos para usar en redes o impresión.</p>
                 </div>
                 <a href="https://wa.me/573236665429?text=Hola%20OrionStudio,%20quiero%20comprar%20el%20servicio%20de%20Creacion%20de%20Logo%20Pro" target="_blank" class="btn-individual-buy">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar
                 </a>
             </div>
 
             <div class="individual-card">
                 <div class="individual-card-top">
-                    <i class="fa-solid fa-film individual-icon"></i>
+                    <i class="fa-solid fa-video individual-icon"></i>
                     <h3>Animación de Logo</h3>
-                    <div class="individual-price micro-price" data-cop="$90.000 COP" data-usd="28 USD">$90.000 COP</div>
-                    <p>Transformamos tu logo estático en un video animado cinematográfico con efectos de luz y movimiento fluido, perfecto para intros, Reels y TikTok.</p>
+                    <span class="individual-price micro-price" data-cop="$70.000 COP" data-usd="$18 USD">$70.000 COP</span>
+                    <p>Damos vida a tu imagen de marca con una animación fluida en video, ideal para intros de contenido, anuncios, Reels y TikTok.</p>
                 </div>
                 <a href="https://wa.me/573236665429?text=Hola%20OrionStudio,%20quiero%20comprar%20el%20servicio%20de%20Animacion%20de%20Logo" target="_blank" class="btn-individual-buy">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar
                 </a>
             </div>
 
@@ -1398,23 +1188,23 @@
                 <div class="individual-card-top">
                     <i class="fa-solid fa-code individual-icon"></i>
                     <h3>Ajustes y Cambios Web</h3>
-                    <div class="individual-price micro-price" data-cop="$80.000 COP" data-usd="25 USD">$80.000 COP</div>
-                    <p>Mantenimiento especializado para tu página existente: actualización de precios, cambio de imágenes, modificación de datos de contacto o nuevas funciones.</p>
+                    <span class="individual-price micro-price" data-cop="$40.000 COP" data-usd="$10 USD">$40.000 COP</span>
+                    <p>Actualización técnica para páginas existentes: actualización de precios, cambio de imágenes, modificación de información o corregir errores visuales.</p>
                 </div>
                 <a href="https://wa.me/573236665429?text=Hola%20OrionStudio,%20quiero%20comprar%20el%20servicio%20de%20Ajustes%20y%20Cambios%20Web" target="_blank" class="btn-individual-buy">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar
                 </a>
             </div>
 
             <div class="individual-card">
                 <div class="individual-card-top">
                     <i class="fa-solid fa-wand-magic-sparkles individual-icon"></i>
-                    <h3>Transformación Fotográfica Pro</h3>
-                    <div class="individual-price micro-price" data-cop="$100.000 COP" data-usd="30 USD">$100.000 COP</div>
-                    <p>Nos envías una foto sencilla de tu producto tomada con celular y la convertimos en una pieza publicitaria de alta gama: mejorando iluminación, tonos y añadiendo fondos pro.</p>
+                    <h3>Edición Fotográfica Pro</h3>
+                    <span class="individual-price micro-price" data-cop="$60.000 COP" data-usd="$15 USD">$60.000 COP</span>
+                    <p>Mejoramos las fotos de tus productos tomadas con celular: corregimos luz, limpiamos el fondo y las convertimos en imágenes publicitarias atractivas.</p>
                 </div>
-                <a href="https://wa.me/573236665429?text=Hola%20OrionStudio,%20quiero%20comprar%20el%20servicio%20de%20Transformacion%20Fotografica%20Pro" target="_blank" class="btn-individual-buy">
-                    <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                <a href="https://wa.me/573236665429?text=Hola%20OrionStudio,%20quiero%20comprar%20el%20servicio%20de%20Edicion%20Fotografica%20Pro" target="_blank" class="btn-individual-buy">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar
                 </a>
             </div>
         </div>
@@ -1423,11 +1213,10 @@
     <!-- PORTAFOLIO INTERACTIVO -->
     <section id="portafolio">
         <div class="section-title">
-            <h2>Portafolio: <span class="gold-glow-text">Nuestras Creaciones</span></h2>
+            <h2>Proyectos <span class="gold-glow-text">Recientes</span></h2>
         </div>
 
         <div class="portfolio-grid">
-            <!-- PROYECTO 1: UrbanBuildersMC -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="urban.png" alt="UrbanBuildersMC" onerror="this.src='fondo-pagina.png'">
@@ -1436,35 +1225,33 @@
                     <span class="portfolio-tag">Desarrollo Web & Gaming</span>
                     <h3 class="portfolio-title">UrbanBuildersMC</h3>
                     <button class="btn-portfolio-view" onclick="openPortfolioModal('https://urbanbuilder.net', 'UrbanBuildersMC')">
-                        Explorar Proyecto 👁️
+                        Ver Proyecto 👁️
                     </button>
                 </div>
             </div>
 
-            <!-- PROYECTO 2 -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="elfelipe.png" alt="ElFelipeB3 Portfolio">
                 </div>
                 <div class="portfolio-content">
-                    <span class="portfolio-tag">Minecraft Builder</span>
-                    <h3 class="portfolio-title">ElFelipeB3 Portfolio</h3>
+                    <span class="portfolio-tag">Portafolio Profesional</span>
+                    <h3 class="portfolio-title">ElFelipeB3</h3>
                     <button class="btn-portfolio-view" onclick="openPortfolioModal('https://elfelipeb3.orionstudio.fun', 'ElFelipeB3 Portfolio')">
-                        Explorar Proyecto 👁️
+                        Ver Proyecto 👁️
                     </button>
                 </div>
             </div>
 
-            <!-- PROYECTO 3 -->
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
                     <img src="proximamente.png" alt="Proximamente">
                 </div>
                 <div class="portfolio-content">
                     <span class="portfolio-tag">Landing Page</span>
-                    <h3 class="portfolio-title">Proximamente</h3>
+                    <h3 class="portfolio-title">Sitio Corporativo</h3>
                     <button class="btn-portfolio-view" onclick="openPortfolioModal('index.html', 'Orion Agency Portal')">
-                        Explorar Proyecto 👁️
+                        Ver Proyecto 👁️
                     </button>
                 </div>
             </div>
@@ -1474,7 +1261,7 @@
     <!-- REDES SOCIALES -->
     <section id="redes">
         <div class="section-title">
-            <h2>Conecta en <span class="gold-glow-text">Nuestras Redes</span></h2>
+            <h2>Nuestras <span class="gold-glow-text">Redes Sociales</span></h2>
         </div>
 
         <div class="social-hub">
@@ -1482,18 +1269,18 @@
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <a href="javascript:void(0)" onclick="openModal('Próximamente 📸', 'Estamos preparando nuestro canal de Instagram oficial. Muy pronto publicaremos nuestros casos de éxito y contenido exclusivo.')" class="social-card instagram">
+            <a href="javascript:void(0)" onclick="openModal('Próximamente', 'Estamos terminando de configurar nuestro perfil oficial de Instagram. Muy pronto compartiremos aquí nuestros trabajos.')" class="social-card instagram">
                 <i class="fa-brands fa-instagram"></i>
                 <span>Instagram</span>
             </a>
-            <a href="javascript:void(0)" onclick="openModal('Próximamente 🌐', 'Nuestra página oficial de Facebook estará disponible muy pronto. ¡Mantente atento!')" class="social-card facebook">
+            <a href="javascript:void(0)" onclick="openModal('Próximamente', 'Nuestra página oficial de Facebook estará disponible dentro de poco. ¡Gracias por tu visita!')" class="social-card facebook">
                 <i class="fa-brands fa-facebook-f"></i>
                 <span>Facebook</span>
             </a>
         </div>
     </section>
 
-    <!-- FOOTER CENTRADO -->
+    <!-- FOOTER -->
     <footer>
         <p class="footer-text">© 2026 OrionStudio — Todos los derechos reservados.</p>
         <p class="footer-subtext">📍 Colombia</p>
@@ -1503,19 +1290,19 @@
     <div id="info-modal" class="modal-overlay" onclick="closeModalOnOuterClick(event)">
         <div class="modal-card">
             <button class="modal-close" onclick="closeModal()">&times;</button>
-            <div id="modal-title" class="modal-title">Título del Beneficio</div>
-            <div id="modal-body" class="modal-body">Descripción del beneficio...</div>
+            <div id="modal-title" class="modal-title">Información</div>
+            <div id="modal-body" class="modal-body">Detalles...</div>
         </div>
     </div>
 
-    <!-- VENTANA MODAL PORTAFOLIO INTERACTIVO (OPTIMIZADA) -->
+    <!-- MODAL PORTAFOLIO INTERACTIVO -->
     <div id="portfolio-modal" class="portfolio-modal-overlay">
         <div class="portfolio-modal-bar">
             <div id="portfolio-modal-title" class="portfolio-modal-title">Vista del Proyecto</div>
             <div class="device-controls">
                 <button class="device-btn active" onclick="setDeviceView('pc', event)">💻 PC</button>
                 <button class="device-btn" onclick="setDeviceView('mobile', event)">📱 Celular</button>
-                <a id="btn-external-link" href="#" target="_blank" class="btn-external-link">Abrir web ↗</a>
+                <a id="btn-external-link" href="#" target="_blank" class="btn-external-link">Abrir en navegador ↗</a>
             </div>
             <button class="modal-close" style="position:relative; top:0; right:0;" onclick="closePortfolioModal()">&times;</button>
         </div>
@@ -1524,9 +1311,9 @@
         </div>
     </div>
 
-    <!-- SCRIPTS DE LÓGICA Y NAVEGACIÓN -->
+    <!-- SCRIPTS -->
     <script>
-        // LÓGICA DE MONEDA
+        // CAMBIO DE MONEDA (COP / USD)
         let currentCurrency = 'COP';
 
         function toggleCurrency() {
@@ -1542,7 +1329,7 @@
             });
         }
 
-        // MODAL INFO BENEFICIOS Y AVISOS
+        // MODAL INFORMATIVO
         function openModal(title, text) {
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-body').innerText = text;
@@ -1559,7 +1346,7 @@
             }
         }
 
-        // MODAL PORTAFOLIO ALTA FLUIDEZ
+        // MODAL PORTAFOLIO INTERACTIVO
         let isPortfolioActive = false;
 
         function openPortfolioModal(url, title) {
@@ -1594,7 +1381,7 @@
             evt.target.classList.add('active');
         }
 
-        // SCRIPT DE PARTÍCULAS DORADAS
+        // PARTÍCULAS DORADAS DE FONDO
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -1606,17 +1393,16 @@
         window.addEventListener('resize', resizeCanvas);
 
         const particles = [];
-        const particleCount = 40;
+        const particleCount = 35;
 
         for (let i = 0; i < particleCount; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                radius: Math.random() * 2 + 0.5,
-                color: '#f5c542',
-                opacity: Math.random() * 0.7 + 0.2,
-                speedY: Math.random() * -0.6 - 0.2,
-                speedX: (Math.random() - 0.5) * 0.4
+                radius: Math.random() * 1.8 + 0.5,
+                opacity: Math.random() * 0.6 + 0.2,
+                speedY: Math.random() * -0.5 - 0.2,
+                speedX: (Math.random() - 0.5) * 0.3
             });
         }
 
@@ -1628,7 +1414,7 @@
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                     ctx.fillStyle = `rgba(245, 197, 66, ${p.opacity})`;
-                    ctx.shadowBlur = 8;
+                    ctx.shadowBlur = 6;
                     ctx.shadowColor = '#f5c542';
                     ctx.fill();
 
