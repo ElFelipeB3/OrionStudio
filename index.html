@@ -598,88 +598,104 @@
             border-color: transparent;
         }
 
-        /* PORTAFOLIO */
+        /* PORTAFOLIO MEJORADO (DISEÑO DINÁMICO) */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .portfolio-card {
-            background: var(--glass-bg);
+            background: linear-gradient(145deg, rgba(18, 14, 26, 0.8), rgba(10, 8, 16, 0.9));
             border: 1px solid var(--glass-border);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            transition: 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .portfolio-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             border-color: var(--gold-main);
+            box-shadow: 0 15px 35px rgba(245, 197, 66, 0.15);
         }
 
         .portfolio-img-box {
             width: 100%;
-            height: 180px;
+            height: 220px;
             overflow: hidden;
             background: #000;
+            position: relative;
+        }
+
+        .portfolio-img-box::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(10, 8, 16, 0.9), transparent);
+            pointer-events: none;
         }
 
         .portfolio-img-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.85;
-            transition: 0.4s ease;
+            opacity: 0.9;
+            transition: 0.5s ease;
         }
 
         .portfolio-card:hover .portfolio-img-box img {
-            transform: scale(1.05);
+            transform: scale(1.08);
             opacity: 1;
         }
 
         .portfolio-content {
-            padding: 18px;
+            padding: 22px;
         }
 
         .portfolio-tag {
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             color: var(--gold-main);
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            letter-spacing: 1.2px;
+            margin-bottom: 6px;
             display: block;
         }
 
         .portfolio-title {
             font-family: var(--font-title);
-            font-size: 1.15rem;
+            font-size: 1.35rem;
             color: #fff;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .btn-portfolio-view {
             width: 100%;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid var(--glass-border);
             color: #fff;
-            padding: 8px;
-            border-radius: 10px;
-            font-size: 0.8rem;
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .btn-portfolio-view:hover {
             background: var(--gold-gradient);
             color: #000;
             border-color: transparent;
+            box-shadow: 0 0 15px var(--glow-gold);
         }
 
         /* MODAL PORTAFOLIO INTERACTIVO */
@@ -782,6 +798,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         .social-card {
@@ -810,11 +828,11 @@
         .social-card.whatsapp:hover { border-color: #25D366; background: rgba(37, 211, 102, 0.1); }
         .social-card.whatsapp i { color: #25D366; }
 
-        .social-card.instagram:hover { border-color: #E1306C; background: rgba(225, 48, 108, 0.1); }
-        .social-card.instagram i { color: #E1306C; }
-
         .social-card.facebook:hover { border-color: #1877F2; background: rgba(24, 119, 242, 0.1); }
         .social-card.facebook i { color: #1877F2; }
+
+        .social-card.tiktok:hover { border-color: #ff0050; background: rgba(255, 0, 80, 0.1); }
+        .social-card.tiktok i { color: #ff0050; }
 
         /* VENTANA MODAL INFO */
         .modal-overlay {
@@ -1207,7 +1225,7 @@
         </div>
     </section>
 
-    <!-- PORTAFOLIO INTERACTIVO -->
+    <!-- PORTAFOLIO INTERACTIVO MEJORADO -->
     <section id="portafolio">
         <div class="section-title">
             <h2>Proyectos <span class="gold-glow-text">Recientes</span></h2>
@@ -1242,12 +1260,12 @@
 
             <div class="portfolio-card">
                 <div class="portfolio-img-box">
-                    <img src="proximamente.png" alt="Proximamente">
+                    <img src="kev.png" alt="Studio de Minecraft" onerror="this.src='fondo-pagina.png'">
                 </div>
                 <div class="portfolio-content">
-                    <span class="portfolio-tag">Landing Page</span>
-                    <h3 class="portfolio-title">Sitio Corporativo</h3>
-                    <button class="btn-portfolio-view" onclick="openPortfolioModal('index.html', 'Orion Agency Portal')">
+                    <span class="portfolio-tag">Plataforma Web / Gaming</span>
+                    <h3 class="portfolio-title">Studio de Minecraft</h3>
+                    <button class="btn-portfolio-view" onclick="openPortfolioModal('https://www.studioskproject.art/', 'Studio de Minecraft')">
                         Ver Proyecto 👁️
                     </button>
                 </div>
@@ -1266,13 +1284,13 @@
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <a href="javascript:void(0)" onclick="openModal('Próximamente', 'Estamos terminando de configurar nuestro perfil oficial de Instagram. Muy pronto compartiremos aquí nuestros trabajos.')" class="social-card instagram">
-                <i class="fa-brands fa-instagram"></i>
-                <span>Instagram</span>
-            </a>
-            <a href="javascript:void(0)" onclick="openModal('Próximamente', 'Nuestra página oficial de Facebook estará disponible dentro de poco. ¡Gracias por tu visita!')" class="social-card facebook">
+            <a href="https://www.facebook.com/share/1F5RAUDDVX/?mibextid=wwXIfr" target="_blank" class="social-card facebook">
                 <i class="fa-brands fa-facebook-f"></i>
                 <span>Facebook</span>
+            </a>
+            <a href="https://www.tiktok.com/@orionstudio_" target="_blank" class="social-card tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TikTok</span>
             </a>
         </div>
     </section>
